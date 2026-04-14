@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro de Líderes - Grupo Angelus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="invitation-card">
+        <div class="header-icon">
+            <i class="fas fa-dove"></i>
+        </div>
+        
+        <div class="bible-quote">
+            "Porque el Hijo del Hombre no vino para ser servido, sino para servir..." <br>
+            <strong>— Marcos 10:45</strong>
+        </div>
+
+        <p class="group-name">Grupo Juvenil Angelus</p>
+        <h1>Retiro de Líderes</h1>
+        
+        <p class="motto" style="font-weight: 600;">"Querido líder te invitamos a vivir el retiro de líderes"</p>
+        
+        <div class="details">
+            <p><i class="far fa-calendar-alt"></i> 30 de Mayo - 31 de Mayo</p>
+            <p><i class="far fa-clock"></i> 6:00 PM (Sábado) a 4:00 PM (Domingo)</p>
+            <p><i class="fas fa-map-marker-alt"></i> Casa de Retiro</p>
+        </div>
+
+        <div id="rsvp-controls" class="rsvp-section">
+            <p class="rsvp-title" style="font-weight: bold; color: var(--marian-blue);">¿Contamos con tu presencia en este servicio?</p>
+            <div class="btn-group">
+                <button id="btn-yes" class="btn btn-yes">Sí, ahí estaré</button>
+                <button id="btn-no" class="btn btn-no">No podré ir</button>
+            </div>
+        </div>
+
+        <div id="already-confirmed" class="success-box">
+            <i class="fas fa-check-circle"></i> 
+            <span>¡Tu respuesta ya ha sido registrada! Muchas gracias.</span>
+        </div>
+    </div>
+
+    <!-- Modal Identificación -->
+    <div id="identify-modal" class="modal">
+        <div class="modal-content">
+            <div class="header-icon" style="font-size: 2.5rem;"><i class="fas fa-user-check"></i></div>
+            <h3>¡Bienvenido Líder!</h3>
+            <p>Por favor, ingresa tu nombre completo para acceder a la invitación:</p>
+            <input type="text" id="identity-name" placeholder="Tu nombre y apellido" required>
+            <button id="submit-identify" class="btn btn-yes" style="width: 100%;">Entrar</button>
+        </div>
+    </div>
+
+    <!-- Modal Motivo Falta -->
+    <div id="reason-modal" class="modal">
+        <div class="modal-content">
+            <h3>Te extrañaremos...</h3>
+            <p>Lamentamos que no puedas asistir. Por favor, cuéntanos brevemente el motivo de tu ausencia:</p>
+            <textarea id="decline-reason" placeholder="Escribe aquí tu motivo..." required></textarea>
+            <div class="btn-group" style="flex-direction: column;">
+                <button id="submit-reason" class="btn btn-yes" style="width: 100%;">Enviar Respuesta</button>
+                <button id="cancel-reason" style="background:none; border:none; color: #666; cursor: pointer; text-decoration: underline;">Volver atrás</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
